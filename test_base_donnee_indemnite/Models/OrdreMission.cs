@@ -18,9 +18,9 @@ namespace test_base_donnee_indemnite.Models
 
         public String numero { get; set; }
 
-        public bool approvedByAdmin { get; set; }
+        public bool etat { get; set; }
 
-        public bool approvedBySP { get; set; }
+        public string name_respo_mission { get; set; }
 
         public DateTime dateDepart { get; set; }
 
@@ -42,12 +42,16 @@ namespace test_base_donnee_indemnite.Models
 
         public int nombreCheuvaux { get; set; }
 
-        public List<OrdrePaiement> ordrePaiement { get; set; }
+        public float montant_total { get; set; }
+
+        public int IdPers { get; set; }
+
+        public int id_trajet { get; set; }
+
         public List<OrdrePayment> ordrePayment { get; set; }
-        [Required]
-        public virtual Personnel personel { get; set; }
-        [Required]
-        public virtual Trajet trajet { get; set; }
+
+
+
 
     }
 }

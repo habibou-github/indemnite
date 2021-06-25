@@ -21,10 +21,9 @@ namespace test_base_donnee_indemnite.Models
 
         //Amount for Fuel
         public double tatalKilo { get; set; }
-        public OrdreVirement ordreVirement { get; set; }
 
-        [Required]
-        public virtual OrdreMission ordermission { get; set; }
+        public int idOrdremission { get; set; }
+        public int IdOrdreVirement { get; set; }
 
     }
 }

@@ -1,0 +1,76 @@
+﻿@model IEnumerable<test_base_donnee_indemnite.Models.OrdreMission>
+
+@{
+    ViewBag.Title = "OrdreMissionList";
+    Layout = "~/Views/Shared/dash.cshtml";
+}
+
+<h2>OrdreMissionList</h2>
+
+<p>
+    @Html.ActionLink("Add a new Mission Ordre", "OrdreMissionInfo")
+</p>
+<br />
+<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateDepart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateArrivee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.echlon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.matricule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.objetDepart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.montant_total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numero)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.dateDepart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dateArrivee)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.echlon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.matricule)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.objetDepart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.montant_total)
+                </td>
+                <td>
+                    @Html.ActionLink("Document", "Document", new { id = item.idOrdremission }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idOrdremission }) |
+                    @Html.ActionLink("Delet", "Delet", new { id = item.idOrdremission }, new { onclick = "return confirm('Are you sure you wish to delete this Mission Ordre numero : "+item.numero+" ?');" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

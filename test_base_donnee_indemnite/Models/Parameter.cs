@@ -16,6 +16,8 @@ namespace test_base_donnee_indemnite.Models
 
         public String nom { get; set; }
 
-        public String valeur { get; set; }
+        public int valeur1 { get; set; }
+
+        public int valeur2 { get; set; }
     }
 }

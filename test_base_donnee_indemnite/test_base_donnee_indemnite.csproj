@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -47,15 +46,183 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.0.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.1\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Interactive.Async, Version=3.0.3000.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Interactive.Async.3.1.1\lib\net46\System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net463\System.Runtime.InteropServices.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.RegularExpressions.4.3.0\lib\net463\System.Text.RegularExpressions.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,8 +241,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
@@ -109,6 +274,11 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -128,16 +298,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdreMissionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105212158491_InitialCreate6.cs" />
-    <Compile Include="Migrations\202105212158491_InitialCreate6.designer.cs">
-      <DependentUpon>202105212158491_InitialCreate6.cs</DependentUpon>
+    <Compile Include="Migrations\202106160849087_InitialCreat11.cs" />
+    <Compile Include="Migrations\202106160849087_InitialCreat11.Designer.cs">
+      <DependentUpon>202106160849087_InitialCreat11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105220016069_InitialCreate61.cs" />
-    <Compile Include="Migrations\202105220016069_InitialCreate61.designer.cs">
-      <DependentUpon>202105220016069_InitialCreate61.cs</DependentUpon>
+    <Compile Include="Migrations\202106171932248_nokey.cs" />
+    <Compile Include="Migrations\202106171932248_nokey.Designer.cs">
+      <DependentUpon>202106171932248_nokey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cadre.cs" />
@@ -145,10 +316,12 @@
     <Compile Include="Models\DbContextIndimnite.cs" />
     <Compile Include="Models\Grades.cs" />
     <Compile Include="Models\OrdreMission.cs" />
-    <Compile Include="Models\OrdrePaiement.cs" />
     <Compile Include="Models\OrdrePayment.cs" />
     <Compile Include="Models\OrdreVirement.cs" />
     <Compile Include="Models\Parameter.cs" />
+    <Compile Include="Models\Parametre_image.cs" />
+    <Compile Include="Models\Parametre_paiement.cs" />
+    <Compile Include="Models\Parametre_voiture.cs" />
     <Compile Include="Models\Personnel.cs" />
     <Compile Include="Models\ServiceEconomique.cs" />
     <Compile Include="Models\ServicePersonnel.cs" />
@@ -156,16 +329,283 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\images\custom-select.png" />
+    <Content Include="Content\assets\images\favicon.png" />
+    <Content Include="Content\assets\images\logo-icon.png" />
+    <Content Include="Content\assets\images\logo-light-icon.png" />
+    <Content Include="Content\assets\images\logo-light-text.png" />
+    <Content Include="Content\assets\images\logo-text.png" />
+    <Content Include="Content\assets\images\users\1-old.jpg" />
+    <Content Include="Content\assets\images\users\1.jpg" />
+    <Content Include="Content\assets\images\users\1.png" />
+    <Content Include="Content\assets\images\users\2.jpg" />
+    <Content Include="Content\assets\images\users\2.png" />
+    <Content Include="Content\assets\images\users\3.jpg" />
+    <Content Include="Content\assets\images\users\3.png" />
+    <Content Include="Content\assets\images\users\4.jpg" />
+    <Content Include="Content\assets\images\users\5.jpg" />
+    <Content Include="Content\assets\images\users\6.jpg" />
+    <Content Include="Content\assets\images\users\7.jpg" />
+    <Content Include="Content\assets\images\users\8.jpg" />
+    <Content Include="Content\assets\images\users\agent.jpg" />
+    <Content Include="Content\assets\images\users\agent2.jpg" />
+    <Content Include="Content\assets\images\users\d1.jpg" />
+    <Content Include="Content\assets\images\users\d2.jpg" />
+    <Content Include="Content\assets\images\users\d3.jpg" />
+    <Content Include="Content\assets\images\users\d4.jpg" />
+    <Content Include="Content\assets\images\users\d5.jpg" />
+    <Content Include="Content\assets\images\users\profile.png" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\assets\libs\chartist-plugin-tooltips\dist\chartist-plugin-tooltip.css" />
+    <Content Include="Content\assets\libs\chartist-plugin-tooltips\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Content\assets\libs\chartist\dist\chartist.min.css" />
+    <Content Include="Content\assets\libs\chartist\dist\chartist.min.js" />
+    <Content Include="Content\assets\libs\jquery\dist\core.js" />
+    <Content Include="Content\assets\libs\jquery\dist\jquery.min.js" />
+    <Content Include="Content\assets\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\css\perfect-scrollbar.min.css" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.min.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.common.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.esm.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Content\assets\libs\perfect-scrollbar\dist\perfect-scrollbar.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\esm\popper-utils.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\esm\popper.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\popper-utils.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\popper.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\umd\popper-utils.min.js" />
+    <Content Include="Content\assets\libs\popper.js\dist\umd\popper.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\darkLogo.png" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-brands.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-brands.min.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-regular.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-regular.min.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-solid.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fa-solid.min.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fontawesome-all.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fontawesome-all.min.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fontawesome.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\css\fontawesome.min.css" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Content\dist\css\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="Content\dist\css\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="Content\dist\css\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="Content\dist\css\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons-core.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons-variables.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons-wind.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons-wind.min.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-beaufort.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-day.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-direction.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-misc.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-moon.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-neutral.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-night.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-time.css" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="Content\dist\css\style.css" />
+    <Content Include="Content\dist\css\style.min.css" />
+    <Content Include="Content\dist\js\app-style-switcher.js" />
+    <Content Include="Content\dist\js\custom.js" />
+    <Content Include="Content\dist\js\dashboard1.js" />
+    <Content Include="Content\dist\js\pages\dashboards\dashboard1.js" />
+    <Content Include="Content\dist\js\tableau.js" />
+    <Content Include="Content\dist\js\sidebarmenu.js" />
+    <Content Include="Content\dist\js\waves.js" />
+    <Content Include="Content\lightLogo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\.DS_Store" />
+    <Content Include="Content\assets\libs\.DS_Store" />
+    <Content Include="Content\assets\libs\bootstrap\dist\.DS_Store" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Content\assets\libs\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Content\dist\.DS_Store" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\fa-brands.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\fa-regular.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\fa-solid.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\fontawesome.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_animated.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_bordered-pulled.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_core.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_fixed-width.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_icons.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_larger.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_list.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_mixins.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_rotated-flipped.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_screen-reader.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_stacked.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\less\_variables.less" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\fa-brands.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\fa-regular.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\fa-solid.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\fontawesome.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\dist\css\icons\font-awesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Content\dist\css\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Content\dist\css\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="Content\dist\css\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Content\dist\css\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Content\dist\css\icons\themify-icons\themify-icons.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Content\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Content\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Content\dist\css\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-beaufort.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-day.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-direction.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-misc.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-moon-aliases.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-moon.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-neutral.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-night.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-time.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-wind-aliases.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-wind-degrees.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-classes\classes-wind.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-beaufort.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-day.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-direction.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-misc.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-moon.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-neutral.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-night.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-time.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\icon-variables\variables-wind-names.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\mappings\wi-forecast-io.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\mappings\wi-owm.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\mappings\wi-wmo4680.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\mappings\wi-yahoo.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons-classes.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons-core.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons-variables.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons-wind.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons-wind.min.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\less\weather-icons.min.less" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-beaufort.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-day.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-direction.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-misc.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-moon.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-neutral.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-night.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-time.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-classes\classes-wind.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-beaufort.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-day.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-direction.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-misc.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-moon.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-neutral.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-night.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-time.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\icon-variables\variables-wind-names.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\mappings\wi-forecast-io.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\mappings\wi-owm.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\mappings\wi-wmo4680.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\mappings\wi-yahoo.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-classes.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-core.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-variables.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-wind.min.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-wind.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons.min.scss" />
+    <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -191,6 +631,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\dash.cshtml" />
+    <Content Include="Views\Shared\SideBar.cshtml" />
+    <Content Include="Views\OrdreMission\OrdreMissionList.cshtml" />
+    <Content Include="Views\OrdreMission\OrdreMissionInfo.cshtml" />
+    <Content Include="Views\OrdreMission\Document.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -209,11 +654,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105212158491_InitialCreate6.resx">
-      <DependentUpon>202105212158491_InitialCreate6.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106160849087_InitialCreat11.resx">
+      <DependentUpon>202106160849087_InitialCreat11.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105220016069_InitialCreate61.resx">
-      <DependentUpon>202105220016069_InitialCreate61.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106171932248_nokey.resx">
+      <DependentUpon>202106171932248_nokey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -249,10 +694,7 @@
       <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -21,10 +21,8 @@ namespace test_base_donnee_indemnite.Models
 
         public String numeroCompte { get; set; }
 
-        [Required]
-        public virtual OrdrePayment orderPayment { get; set; }
+        public int IdOrdrePayment { get; set; }
 
-        [Required]
-        public virtual OrdrePaiement orderpaiment { get; set; }
+
     }
 }
