@@ -22,12 +22,12 @@ namespace test_base_donnee_indemnite.Controllers
 
         public ActionResult OrdreMissionList()
         {
+            ViewBag.P = _context.personnels.ToList();
             var ordreMissions = _context.ordremission.ToList();
             return View(ordreMissions);
         }
         public ActionResult OrdreMissionInfo()
         {
-
             ViewBag.P = _context.personnels.ToList();
             ViewBag.T = _context.trajet.ToList();
 
@@ -73,6 +73,74 @@ namespace test_base_donnee_indemnite.Controllers
             }
             _context.SaveChanges();
             return RedirectToAction("OrdreMissionList");
+        }
+
+        public ActionResult EtatIndemnite()
+        {
+            string personnel = (string)Request.Form["IdPers"];
+            string mois = Request.Form["mois"];
+            string annee = Request.Form["annee"];
+
+            Session["personnel"] = personnel;
+            Session["mois"] = mois;
+            Session["annee"] = annee;
+            //ViewData["mois"] = mois;
+            //ViewData["annee"] = annee;
+
+            //Session["mois"] = mois;
+            //Session["annee"] = annee;
+
+
+
+            return Redirect(Url.Action("PrintEtatIndKilo", "EtatIndKilo"));
+        }
+
+        public ActionResult EtatIndDep()
+        {
+            string personnel = Request.Form["IdPers"];
+            string mois = Request.Form["mois"];
+            string annee = Request.Form["annee"];
+
+            Session["personnel"] = personnel;
+            Session["mois"] = mois;
+            Session["annee"] = annee;
+            return Redirect(Url.Action("PrintEtatIndDep", "EtatIndDep"));
+        }
+
+        public ActionResult PaimentDeplacement()
+        {
+            string personnel = Request.Form["IdPers"];
+            string mois = Request.Form["mois"];
+            string annee = Request.Form["annee"];
+
+            string ov = Request.Form["ov"];
+            string bp = Request.Form["bp"];
+
+            Session["personnel"] = personnel;
+            Session["mois"] = mois;
+            Session["annee"] = annee;
+
+            Session["ov"] = ov;
+            Session["annee"] = annee;
+            return Redirect(Url.Action("PrintOrdrePaiment", "OrdrePaiment"));
+        }
+
+        public ActionResult PaimentKilometrique()
+        {
+            string personnel = Request.Form["IdPers"];
+            string mois = Request.Form["mois"];
+            string annee = Request.Form["annee"];
+
+            string ov = Request.Form["ov"];
+            string bp = Request.Form["bp"];
+
+            Session["personnel"] = personnel;
+            Session["mois"] = mois;
+            Session["annee"] = annee;
+
+            Session["ov"] = ov;
+            Session["annee"] = annee;
+            return Redirect(Url.Action("PrintOrdrePaimentKilo", "OrdrePaimentKilo"));
         }
 
         public ActionResult Edit(int? id)
@@ -144,6 +212,48 @@ namespace test_base_donnee_indemnite.Controllers
 
             ViewBag.currentTime = DateTime.Now;
             return View(om);
+        }
+
+        public ActionResult generateordremission(int? id)
+        {
+            var om = _context.ordremission.FirstOrDefault(o => o.idOrdremission == id);
+
+            ViewBag.grad = om.grade;
+            ViewBag.objetDepart = om.objetDepart;
+            ViewBag.dateDepart = om.dateDepart + " " + om.heureDepart;
+            ViewBag.dateArrivee = om.dateArrivee + " " + om.heureArrivee;
+            ViewBag.moyenTransport = om.moyenTransport;
+            ViewBag.matricule = om.matricule;
+            var personne = _context.personnels.FirstOrDefault(p => p.IdPers == om.IdPers);
+
+            ViewBag.nom = personne.Nom;
+            ViewBag.prenom = personne.Prenom;
+            ViewBag.nomarab = personne.nomarabe;
+            ViewBag.prenomarab = personne.prenomarabe;
+            ViewBag.role = personne.Role;
+
+            string na = personne.nomarabe;
+            char[] charArrayna = na.ToCharArray();
+            Array.Reverse(charArrayna);
+            ViewBag.nomarabe = new string(charArrayna);
+
+            string pa = personne.prenomarabe;
+            char[] charArraypa = pa.ToCharArray();
+            Array.Reverse(charArraypa);
+            ViewBag.orenomarabe = new string(charArraypa);
+
+            string mmme = " طلب للسيد / للسيدة: ";
+            char[] charArraymmme = mmme.ToCharArray();
+            Array.Reverse(charArraymmme);
+            ViewBag.mmme = new string(charArraymmme);
+
+            string s = "المطلوب من رجال السلطة أن يقدموا معونتهم ومساعداتهم لحامل هذا الأمر بالمهمة";
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            ViewBag.ss = new string(charArray);
+
+            ViewBag.currentTime = DateTime.Now;
+            return new Rotativa.ViewAsPdf("Document", om);
         }
 
         // GET: OrdreMission

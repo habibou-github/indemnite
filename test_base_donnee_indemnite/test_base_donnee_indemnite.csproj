@@ -87,6 +87,9 @@
     <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\packages\Remotion.Linq.2.1.1\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
@@ -297,8 +300,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EtatIndDepController.cs" />
+    <Compile Include="Controllers\EtatIndKiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdreMissionController.cs" />
+    <Compile Include="Controllers\OrdrePaimentController.cs" />
+    <Compile Include="Controllers\OrdrePaimentKiloController.cs" />
+    <Compile Include="Controllers\OrdreVirementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -384,6 +392,10 @@
     <Content Include="Content\assets\libs\jquery\dist\core.js" />
     <Content Include="Content\assets\libs\jquery\dist\jquery.min.js" />
     <Content Include="Content\assets\libs\jquery\dist\jquery.slim.min.js" />
+    <Content Include="Content\assets\libs\jquery\jquery.datetimepicker.full.js" />
+    <Content Include="Content\assets\libs\jquery\jquery.datetimepicker.full.min.js" />
+    <Content Include="Content\assets\libs\jquery\jquery.datetimepicker.min.css" />
+    <Content Include="Content\assets\libs\jquery\jquery.datetimepicker.min.js" />
     <Content Include="Content\assets\libs\perfect-scrollbar\dist\css\perfect-scrollbar.min.css" />
     <Content Include="Content\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.jquery.min.js" />
     <Content Include="Content\assets\libs\perfect-scrollbar\dist\js\perfect-scrollbar.min.js" />
@@ -454,6 +466,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\assets\.DS_Store" />
@@ -606,6 +622,7 @@
     <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons-wind.scss" />
     <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons.min.scss" />
     <Content Include="Content\dist\css\icons\weather-icons\sass\weather-icons.scss" />
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -636,9 +653,14 @@
     <Content Include="Views\OrdreMission\OrdreMissionList.cshtml" />
     <Content Include="Views\OrdreMission\OrdreMissionInfo.cshtml" />
     <Content Include="Views\OrdreMission\Document.cshtml" />
+    <Content Include="Views\EtatIndDep\EtatIndDep.cshtml" />
+    <Content Include="Views\EtatIndKilo\EtatIndKilo.cshtml" />
+    <Content Include="Views\OrdrePaiment\OrdrePaiment.cshtml" />
+    <Content Include="Views\OrdrePaimentKilo\OrdrePaimentKilo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\OrdreVirement\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

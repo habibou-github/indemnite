@@ -1,0 +1,326 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        body {
+            height: 13in;
+            width: 9.25in;
+            /*(comment)/// to centre page on screen*/
+            margin-left: auto;
+            margin-right: auto;
+            border: solid 1px;
+        }
+
+        .ecole {
+            text-align: center;
+            margin-left: 40px;
+            width: 900px;
+        }
+
+        .img {
+            margin-left: 280px;
+            width: 200px;
+            height: auto;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .w {
+            width: 350px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .info {
+            display: flex;
+        }
+
+        .info1 {
+            margin-left: 30px;
+        }
+
+        .info2 {
+            margin-left: 250px;
+            margin-top: 50px;
+        }
+
+        .table {
+            text-align: center;
+            width: 70%;
+            margin-left: 130px;
+        }
+
+        .table1 {
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse 2px;
+        }
+
+        .table2 {
+            text-align: center;
+            width: 84.6%;
+            border-collapse: collapse;
+        }
+
+        .textLeft {
+            text-align: left;
+        }
+
+        .textRight {
+            text-align: right;
+        }
+
+        td {
+            width: 80px;
+        }
+
+        .borderStyle {
+            border-style: dashed;
+            width: 230px;
+            height: 20px;
+            padding-left: 30px;
+        }
+
+        .underTable {
+            display: flex;
+            margin-left: 100px;
+            margin-right: 10px;
+        }
+
+        .prix {
+            margin-left: 200px;
+        }
+
+        .elargir {
+            width: 10%;
+        }
+
+        p {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        @*<div class="ecole">
+                <p>UNIVERSITE CADI AYYAD</p>
+                <p class="w">ECOLE NATIONAL DES SCIENCES APPLIQUEES</p>
+                <p>SAFI</p>
+            </div>
+            <div><img src="ensasLogo.png" alt="ensasLogo" class="img"></div>*@
+
+        <table>
+            <tr>
+                <td class="ecole">
+                    <p>UNIVERSITE CADI AYYAD</p>
+                    <p class="w">ECOLE NATIONAL DES SCIENCES APPLIQUEES</p>
+                    <p>SAFI</p>
+                </td>
+
+                <td><img src="~/Content/ensasLogo.png" alt="ensasLogo" class="img"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="title">
+        <p> <b><u>ETAT DES INDEMNITES KILOMETRAGES OU DE</u></b> </p>
+        <p><b><u> DEPLACEMENT</u></b></p>
+    </div>
+    <div class="info">
+        @*<div class="info1">
+                <p>M 208</p>
+                <p>Effectués pendant le mois de : ..........</p>
+                <p>Nom & Prénom : HABIBOU HAMZA</p></p>
+                <p>Echelle : ..........</p></p>
+                <p>Groupe : ..........</p></p>
+                <p>Motif de déplacement : ..........</p></p>
+            </div>
+            <div class="info2">
+                <p>Grade : ..........</p></p>
+                <p>Résidence : ..........</p>   </p>
+            </div>*@
+
+
+        <table class="info1">
+            <tr>
+                @*<td class="w ">
+                        <p>M 208</p>
+                        <p>Effectués pendant le mois de : @ViewBag.mois</p>
+                        <p>Nom & Prénom : @ViewBag.personnel</p></p>
+                        <p>Echelle : @ViewBag.echelle</p></p>
+                        <p>Groupe : @ViewBag.groupe</p></p>
+                        <p>Motif de déplacement : @ViewBag.motif</p></p>
+                    </td>
+
+                    <td class="w">
+                        <p>Grade : @ViewBag.grade</p></p>
+                        <p>Résidence : @ViewBag.residence</p>   </p>*@
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table border="2" class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <table border="1" class="table1">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4" style="height: 60px;" class="textLeft">1°) Indemnités de déplacement</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="textLeft">Nombre</td>
+                                    <td class="textLeft">Taux</td>
+                                    <td class="textLeft">Total</td>
+                                </tr>
+                                <tr>
+                                        <td class="textLeft">Découcher</td>
+                                        <td class="textRight">@ViewBag.nbJ</td>
+                                        <td class="textRight">@ViewBag.taux</td>
+                                        <td class="textRight">@ViewBag.total</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textLeft">Repas de midi</td>
+                                        <td class="textRight">@ViewBag.nbJ</td>
+                                        <td class="textRight">@ViewBag.taux</td>
+                                        <td class="textRight">@ViewBag.total</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textLeft">Repas de soir</td>
+                                        <td class="textRight">@ViewBag.nbJ</td>
+                                        <td class="textRight">@ViewBag.taux</td>
+                                        <td class="textRight">@ViewBag.total</td>
+                                    </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class="textLeft">S/TOTAL (I)</td>
+                                        <td class="textRight">@ViewBag.totalGlobal</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="height: 60px;">
+                                            <table border="0" class="table1">
+                                                <tbody>
+                                                    <tr><td colspan="4" class="textLeft">2°) Indemnités kilométriques</td></tr>
+                                                    <tr>
+                                                        <td class="textLeft">Voiture personnelle :</td>
+                                                        <td class="textLeft">FIAT n°23289</td>
+                                                        <td class="textLeft">Puissance</td>
+                                                        <td>6</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td class="textLeft">Nombre</td>
+                                        <td class="textLeft">Taux</td>
+                                        <td class="textLeft">Total</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="textLeft">*Kms sur route</td>
+                                        <td class="textRight">0</td>
+                                        <td class="textRight">1,2</td>
+                                        <td class="textRight">0,00</td>
+                                    </tr>
+                                    <tr>
+                            <td class="textLeft">*Kms sur route</td>
+                            <td class="textRight">&nbsp;</td>
+                            <td class="textRight">&nbsp;</td>
+                            <td class="textRight">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="textLeft">S/TOTAL (I)</td>
+                    <td class="textRight">48,00</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- DivTable.com -->
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1" class="table1">
+                    <tbody>
+                        <tr>
+                            <td style="height: 30px;" class="textLeft">3°) Frais de tronsport</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="textLeft">
+                                <table border="0" class="table1">
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="textLeft">Aller</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class="textLeft">Retour</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>S/TOTAL (III)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+        <table border="0" class="table2">
+            <tbody>
+                <tr>
+                    <td colspan="3">TOTAL(I+II+III)</td>
+                    <td style="border:solid 3px; width: 150px;">0,00</td>
+                </tr>
+            </tbody>
+        </table>
+        </table>
+    </div>
+    <br>
+    <table class="underTable">
+        <tr>
+            <td class="w">Le Présent état s'élève à la somme de :</td>
+            <td><pre class="borderStyle">48   dirhams, 00 cts</pre></td>
+        </tr>
+    </table>
+    <br>
+    <div style="margin-left: 30px;">
+        <p>Le bénéficaire atteste, n'avoir bénéficier d'aucune prise en charge total ou partielle de la part de la partie inviantante</p>
+        <br><br>
+        <p>Le sous ordonnateur soussigné, certifie l'exactitude des renseignements portés au présent état</p>
+        <br>
+        <div style="margin-left:630px;"><p>Safi, Le 05/05/2021</p></div>
+
+    </div>
+
+    <a href="PrintEtatIndKilo">Generate PDF</a>
+
+</body>
+</html>

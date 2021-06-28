@@ -10,8 +10,11 @@ namespace test_base_donnee_indemnite.Controllers
     {
         public ActionResult Index()
         {
+
             return View();
         }
+
+
 
         public ActionResult About()
         {

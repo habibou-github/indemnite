@@ -35,7 +35,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.dateDepart, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.dateDepart, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.dateDepart, new { htmlAttributes = new { @class = "form-control", Type = "date" } })
             @Html.ValidationMessageFor(model => model.dateDepart, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -43,7 +43,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.dateArrivee, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.dateArrivee, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.dateArrivee, new { htmlAttributes = new { @class = "form-control", Type = "date" } })
             @Html.ValidationMessageFor(model => model.dateArrivee, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -51,7 +51,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.heureDepart, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.heureDepart, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.heureDepart, new { htmlAttributes = new { @class = "form-control", Type = "time" } })
             @Html.ValidationMessageFor(model => model.heureDepart, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.heureArrivee, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.heureArrivee, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.heureArrivee, new { htmlAttributes = new { @class = "form-control", Type = "time" } })
             @Html.ValidationMessageFor(model => model.heureArrivee, "", new { @class = "text-danger" })
         </div>
     </div>

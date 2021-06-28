@@ -1,0 +1,164 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pages</title>
+    <style>
+
+        .noBorder {
+            border: 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            background-color: #696969;
+            color: #fff;
+        }
+
+        p {
+            padding: 5px;
+            width: 100%;
+            font-size: 12px;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+
+        .p1 {
+            border-width: 2px;
+            border-style: solid;
+            font-size: 12px;
+        }
+
+        table {
+            border-collapse: collapse
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 0px;
+            font-size: 12px;
+        }
+
+        .a {
+            border: 1px solid black;
+            text-align: center;
+            padding: 0px
+        }
+
+        .b {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="a"><p>UNIVERSITE CADI AYYAD</p><p>ECOLE NATIONALE DES SCIENCES APPLIQUEES</p><p>B.P, route Sidi Bouzid </p><br><p>Safi</p></td>
+            <td class="a"><h2>ORDRE DE PAIMENT</h2><p>/2021</p><p>Budget de Fonctionnement</p> </td>
+            <td class="a">
+                <h3>Exercice 2021</h3>
+                <p>Année d'origine de la créance : 2021<br> COMPTE Nº 49531<br> OUVERT A LA TRESORERIE<br>REGIONALE DE SAFI</p>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <p class="p1">
+        Bénéficière :<br><br><br>
+        Domiciliation : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Safi
+    </p>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>PIECES JUSTIFICATIVES</th>
+                <th>Chapitre</th>
+                <th>ART</th>
+                <th>&</th>
+                <th>Lig</th>
+                <th>Crédit Ouvert</th>
+                <th>NATURE DES OPERATIONS</th>
+                <th>Montant</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">
+                    Etat des indimnit2s de déplacement <br><br><br>
+                    Ordre de mission 208/2021<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </td>
+                <td>MDD<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+                <td>@ViewBag.ART<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+                <td>@ViewBag.and<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+                <td>@ViewBag.Lig<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+                <td rowspan="4">Crédit en cours<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+                <td rowspan="4">
+                    Intitulé de l'article : Pilotage de Gouvernance <br><br> Intitulé de &: Rayonnement et ouverture<br><hr> Intitulé de la Lig : Indémnités de déplacement à l'interieur du Royaume
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p class="b">Certification de liquidation par le service concerné</p><br>
+                </td>
+                <td>480,00<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td>
+            </tr>
+            <!---
+                    <tr>
+                      <td colspan="7">Arrete le present ordre de Paiement a ala somme de : quatre </td>
+                      <td>480,00</td>
+                    </tr>
+                  -->
+            <!--
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Intitule de &: Rayonnement et ouverture</td>
+                <td></td>
+              </tr>
+            -->
+
+        </tbody>
+
+    </table>
+    <table>
+        <tr>
+            <td colspan="8">arrêté le présent Ordre de Paiement à la somme de : Quatre cent quatre vignt dirhams </td>
+            <td>480,00</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table>
+        <caption>Dossier établis par: A.Ouafa</caption>
+        <thead>
+            <tr>
+                <th>LES SOUS ORDONNATEUR</th>
+                <th>LE FONDE DE POUVOIRS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><br>Transmis au fondé de pouvoirs le : <br> <br><br>Signature du sous Ordonnateur : <br><br><br><br><br><br><br><br><br><br><br></td>
+                <td><br>Mode de réglement :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OV nº &nbsp; @ViewBag.ov &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     BP &nbsp;   @ViewBag.bp       <br>  <br><br>Date de réglement : <br> <br><br> Visa du fondé de pouvoirs : <br><br><br><br><br><br><br><br><br><br><br></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="noBorder">
+        <tr>
+            <td class="noBorder"><p>Dossier établi par : @ViewBag.nomPersonnel . @ViewBag.prenomPersonnel</p></td>
+            <td class="noBorder"><p>Safi, le @DateTime.Now</p></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
