@@ -303,6 +303,7 @@
     <Compile Include="Controllers\EtatIndDepController.cs" />
     <Compile Include="Controllers\EtatIndKiloController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrdreMissionController.cs" />
     <Compile Include="Controllers\OrdrePaimentController.cs" />
     <Compile Include="Controllers\OrdrePaimentKiloController.cs" />
@@ -657,6 +658,7 @@
     <Content Include="Views\EtatIndKilo\EtatIndKilo.cshtml" />
     <Content Include="Views\OrdrePaiment\OrdrePaiment.cshtml" />
     <Content Include="Views\OrdrePaimentKilo\OrdrePaimentKilo.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -121,7 +121,7 @@ namespace test_base_donnee_indemnite.Controllers
             Session["annee"] = annee;
 
             Session["ov"] = ov;
-            Session["annee"] = annee;
+            Session["bp"] = bp;
             return Redirect(Url.Action("PrintOrdrePaiment", "OrdrePaiment"));
         }
 
@@ -139,7 +139,7 @@ namespace test_base_donnee_indemnite.Controllers
             Session["annee"] = annee;
 
             Session["ov"] = ov;
-            Session["annee"] = annee;
+            Session["bp"] = bp;
             return Redirect(Url.Action("PrintOrdrePaimentKilo", "OrdrePaimentKilo"));
         }
 
